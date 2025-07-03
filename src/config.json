@@ -1,0 +1,4 @@
+{
+    "Commands": ["Organize", "Exit", "0 (Same as Exit)", "cd (Change Drive)", "get_cwd"],
+    "Organized_Directory": "D:"
+}
