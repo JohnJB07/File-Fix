@@ -38,8 +38,7 @@ class Directory:
 
     def changeDirectory(token: str):
         """
-        Takes a token string truncates the left side 
-        and changes the directory based on the token given\n
+        Takes a token string and changes the directory based on the token given\n
         :returns None:\n
         :param: :token: str
         """
