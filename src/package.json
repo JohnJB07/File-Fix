@@ -1,0 +1,28 @@
+{
+    "FILES": {
+        "PRESET": {
+            "UNORGANIZED": "Unorganized",
+            "ORGANIZED": {
+                "Word": ".docx",
+                "Excel": ".xlsx",
+                "PDF": ".pdf",
+                "Audio": [".wav", ".mp3", ".ogg"],
+                "Png": ".png",
+                "Jpeg": ".jpg",
+                "Videos": ".mp4",
+                "Text": ".txt"
+            }
+        }
+    },
+    "CMDS": {
+        "Note": "NOTE: If you create a directory it will create that directory in the current directory.",
+        "exit": "quits program",
+        "break": "quits program",
+        "get_cwd": "gets current working directory",
+        "cd": "To change directory, just input the directory you desire. (e.g. cd C:\\ -> C:\\)",
+        "init_org": "Initializes organize command by creating 2 preset folders",
+        "create_preset": "Creates a preset directory file in current folder",
+        "organize": "Organize the files in the UNORGANIZED folder (MUST RUN 'init_org' AND 'create_preset' FIRST)",
+        "makedir": "makes a new directory at current directory - (input: makedir DIRECTORY_NAME)"
+    }
+}
