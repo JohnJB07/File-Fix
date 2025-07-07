@@ -38,16 +38,19 @@ class Directory:
 
     def changeDirectory(token: str):
         """
-        Takes a token string and changes the directory based on the token given\n
+        Takes a token string truncates the left side 
+        and changes the directory based on the token given\n
         :returns None:\n
         :param: :token: str
         """
-        if os.path.isdir(token):
+        if os.path.exists(token):
             try:
                 os.chdir(token)
                 print(f"Changed directory to: {Directory.getCurrentDirectory()}")
             except (TypeError, OSError) as e:
-                print("Error: ", e) 
+                print("Error: ", e)
+        else:
+            print(f"Directory '{token}' doesn't exist.")
 
     def makeDirectory(token: str):
         """
@@ -60,7 +63,4 @@ class Directory:
             print("Directory already exists.")
         else:
             os.mkdir(full_dir)
-            print(f"Successfully created directory at: {full_dir}")
-
-    def organizeDirectory(token: dict):
-        pass
+            print(f"Successfully created directory at: {full_dir}")        
