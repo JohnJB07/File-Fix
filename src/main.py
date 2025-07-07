@@ -15,29 +15,19 @@ class Main:
         options.Print.returnLogo()
         while not self.exit:
             options.Print.printLine()
-
-            # Old get input
-            # empty_string = " "
-            # tokens = empty_string.join(["cd", input("Input Here: ")])
             
             token = input("Input here: ").lower()
             if token == "exit" or token == "break":
                 self.exit = True
             elif token == "get_cwd":
                 print("Current directory: ",self.directory.getCurrentDirectory())
-            elif token == "init_org":
+            elif token == "create_folders":
                 for items in self.json_file["FILES"]["PRESET"]:
-                    os.mkdir(items)
-            elif token == "create_preset":
-                for items in self.json_file["FILES"]["PRESET"]["ORGANIZED"]:
                     directory.Directory.makeDirectory(items)
             elif token == "cmds":
                 options.Print.printCommands(self.json_file)
             elif token[:3] == "cd ":
                 directory.Directory.changeDirectory(token[3:])
-            # TODO: Create token for organize
-            elif token == "organize":
-                directory.Directory.organizeDirectory()
             elif token[:8] == "makedir ":
                 directory.Directory.makeDirectory(token[8:])
             else:
