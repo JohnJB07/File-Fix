@@ -1,3 +1,3 @@
-# FILE MAKER
+# FOLDER MAKER
 
 created in python
